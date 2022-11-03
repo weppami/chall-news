@@ -2,7 +2,9 @@
 module.exports = {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
-
+		fontSize: {
+			sm: ['15px', '20px'],
+		}
 		screens: {
 			'sm': '375px',
 			// => @media (min-width: 375px) { ... }
@@ -10,7 +12,7 @@ module.exports = {
 			'md': '960px',
 			// => @media (min-width: 960px) { ... }
 
-			'lg': '1200px',
+			'lg': '1440px',
 			// => @media (min-width: 1440px) { ... }
 		},
 		colors: {
