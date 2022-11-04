@@ -14,12 +14,12 @@ module.exports = {
 			// => @media (min-width: 1440px) { ... }
 		},
 		colors: {
-			'soft-orange': '#E9AB53',
-			'soft-red': '#F15E50',
-			'off-white': '#FFFDFA',
-			'gray-blue': '#C5C6CE',
-			'dark-gray': '#5D5F79',
-			'dark-blue': '#000019',
+			'soft-orange': 'hsl(35, 77%, 62%);',
+			'soft-red': 'hsl(5, 85%, 63%);',
+			'off-white': 'hsl(36, 100%, 99%);',
+			'gray-blue': 'hsl(233, 8%, 79%);',
+			'dark-gray': 'hsl(236, 13%, 42%);',
+			'dark-blue': 'hsl(240, 100%, 5%);',
 		},
 		extend: {
 			backgroundImage: (theme) => ({
