@@ -4,6 +4,9 @@ dist/
 # dependencies
 node_modules/
 
+# challange files
+news-homepage-main/
+
 # logs
 npm-debug.log*
 yarn-debug.log*
@@ -15,5 +18,6 @@ pnpm-debug.log*
 .env
 .env.production
 
-# macOS-specific files
+# macOS specific files
 .DS_Store
+
