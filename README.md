@@ -33,7 +33,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Here the solution](https://www.frontendmentor.io/solutions/landing-page-with-tailwind-flexbox-and-grids-SQCuoCtzH5)
 - Live Site URL: [Netlify](https://magical-banoffee-e581f6.netlify.app/)
 
 ## My process
