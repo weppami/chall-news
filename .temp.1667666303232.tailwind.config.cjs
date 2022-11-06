@@ -24,9 +24,10 @@ module.exports = {
 		extend: {
 			backgroundImage: (theme) => ({
 				hero: "url('./assets/img/image-web-3-desktop.jpg')",
-				herom: "url('./assets/img/image-web-3-mobile.jpg')",
-			}),
-		},
+				hero- m: "url('./assets/img/image-web-3-mobile.jpg')",
+
+		}),
 	},
+},
 	plugins: [],
 }

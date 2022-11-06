@@ -4,11 +4,20 @@ import "../../styles/base.css";
 
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/x-icon" href="/favicon-32x32.png" />
-    <meta name="viewport" content="width=device-width" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | News homepage</title>
     <meta name="generator" content="{Astro.generator}" />
-    <title>Astro</title>
+
     <script>
       // grab everything we need
       const btn = document.querySelector("button.mobile-menu-button");
@@ -18,15 +27,22 @@ import "../../styles/base.css";
       // add event listeners
       btn.addEventListener("click", () => {
         menu.classList.toggle("hidden");
+        document.getElementById("overlay").style.display = "block";
       });
       // add event listeners
       btn2.addEventListener("click", () => {
         menu.classList.toggle("hidden");
+        document.getElementById("overlay").style.display = "none";
       });
     </script>
   </head>
   <body>
-    <div class="container w-lg mx-auto bg-off-white">
+    <div
+      id="overlay"
+      class="fixed hidden w-full h-full top-0 bottom-0 left-0 right-0 bg-gray-blue opacity-70 z-2"
+    >
+    </div>
+    <div class="container pr-16 md:pr-6 w-lg mx-auto bg-off-white">
       <nav
         class="max-w-screen-lg mt-12 flex flex-col text-center sm:flex-row sm:text-left sm:justify-between py-4 px-6 sm:items-center"
       >
@@ -41,16 +57,6 @@ import "../../styles/base.css";
                 fill="#00001A"></path>
             </svg>
           </a>
-        </div>
-        <div class="lg:hidden flex items-center">
-          <button class="mobile-menu-button">
-            <svg width="40" height="17" xmlns="http://www.w3.org/2000/svg"
-              ><g fill="#00001A" fill-rule="evenodd"
-                ><path d="M0 0h40v3H0zM0 7h40v3H0zM0 14h40v3H0z"></path><path
-                  d="M0 0h40v3H0z"></path>
-              </g>
-            </svg>
-          </button>
         </div>
         <div class="space-x-14 hidden lg:flex lg:items-center lg:w-auto w-full">
           <a
@@ -79,6 +85,16 @@ import "../../styles/base.css";
             >Categories</a
           >
         </div>
+        <div class="lg:hidden flex items-center">
+          <button class="mobile-menu-button">
+            <svg width="40" height="17" xmlns="http://www.w3.org/2000/svg"
+              ><g fill="#00001A" fill-rule="evenodd"
+                ><path d="M0 0h40v3H0zM0 7h40v3H0zM0 14h40v3H0z"></path><path
+                  d="M0 0h40v3H0z"></path>
+              </g>
+            </svg>
+          </button>
+        </div>
         <!-- mobile menu -->
         <div
           class="mobile-menu hidden lg:hidden absolute bg-off-white top-0 bottom-0 right-0 left-1/2 z-10"
@@ -96,35 +112,50 @@ import "../../styles/base.css";
             </button>
           </div>
           <div class="ml-6 mt-48">
-            <a href="#" class="block py-2 px-4 text-xl font-bold text-dark-gray"
+            <a
+              href="#"
+              class="block py-2 px-4 text-xl font-bold text-dark-gray hover:text-soft-orange"
               >Home</a
             >
-            <a href="#" class="block py-2 px-4 text-xl font-bold text-dark-gray"
+            <a
+              href="#"
+              class="block py-2 px-4 text-xl font-bold text-dark-gray hover:text-soft-orange"
               >New</a
             >
-            <a href="#" class="block py-2 px-4 text-xl font-bold text-dark-gray"
+            <a
+              href="#"
+              class="block py-2 px-4 text-xl font-bold text-dark-gray hover:text-soft-orange"
               >Popular</a
             >
-            <a href="#" class="block py-2 px-4 text-xl font-bold text-dark-gray"
+            <a
+              href="#"
+              class="block py-2 px-4 text-xl font-bold text-dark-gray hover:text-soft-orange"
               >Trending</a
             >
-            <a href="#" class="block py-2 px-4 text-xl font-bold text-dark-gray"
+            <a
+              href="#"
+              class="block py-2 px-4 text-xl font-bold text-dark-gray hover:text-soft-orange"
               >Categories</a
             >
           </div>
         </div>
       </nav>
-      <div class="flex mt-10 gap-6">
-        <div class="w-2/3 ml-8 flex flex-col">
-          <div class="bg-hero bg-no-repeat bg-cover bg-center h-96"></div>
-          <div class="flex gap-14">
-            <div class="w-1/2">
-              <p class="text-6xl font-extrabold mt-4 pr-6 tracking-wider">
+      <div class="flex md:flex-row flex-col mt-10 gap-6">
+        <div class="w-full md:w-2/3 ml-8 flex flex-col">
+          <div class="bg-herom md:bg-hero bg-no-repeat bg-cover bg-center h-96">
+          </div>
+          <div class="flex flex-col md:flex-row md:gap-14">
+            <div class="w-full md:w-1/2">
+              <p
+                class="text-3xl md:text-6xl font-extrabold mt-4 md:pr-6 md:tracking-wider"
+              >
                 The Bright Future of Web 3.0?
               </p>
             </div>
-            <div class="w-1/2 mt-6 text-dark-gray text-base">
-              <p class="text-dark-gray text-sm leading-6 tracking-wider ml-4">
+            <div class="w-full md:w-1/2 md:mt-6 mt-3 text-dark-gray text-base">
+              <p
+                class="text-dark-gray text-sm leading-6 tracking-wider md:ml-4"
+              >
                 We dive into the next evolution of the web that claims to put
                 the power of the platforms back into the hands of the people.
                 But is it really fulfilling its promise?
@@ -132,7 +163,7 @@ import "../../styles/base.css";
               <div class="text-left">
                 <button
                   type="button"
-                  class="inline-block px-6 py-4 bg-soft-red text-off-white hover:bg-dark-blue font-medium text-sm tracking-widest uppercase mt-5 ml-4"
+                  class="inline-block px-3 py-2 md:px-6 md:py-4 bg-soft-red text-off-white hover:bg-dark-blue font-xs md:font-medium text-xs md:text-sm md:tracking-widest uppercase md:mt-5 mt-3 md:ml-4"
                 >
                   R E A D &nbsp;&nbsp;M O R E
                 </button>
@@ -140,12 +171,18 @@ import "../../styles/base.css";
             </div>
           </div>
         </div>
-        <div class="w-1/3 bg-dark-blue flex flex-col p-8">
-          <div class="font-bold text-5xl text-soft-orange mb-10">New</div>
+        <div
+          class="w-full md:w-1/3 bg-dark-blue flex flex-col md:p-8 ml-8 p-6 mt-2 md:mt-0"
+        >
+          <div
+            class="font-bold md:text-5xl text-3xl text-soft-orange md:mb-10 mb-6"
+          >
+            New
+          </div>
           <div>
             <a
               href="#"
-              class="font-bold text-xl text-off-white mb-2 hover:text-soft-orange"
+              class="font-bold md:text-xl text-base text-off-white mb-2 hover:text-soft-orange"
               >Hydrogen VS Electric Cars</a
             >
             <p
@@ -155,10 +192,10 @@ import "../../styles/base.css";
             </p>
             <hr class="opacity-30 text-off-white" />
           </div>
-          <div class="mt-10">
+          <div class="md:mt-10 mt-6">
             <a
               href="#"
-              class="font-bold text-xl text-off-white mb-2 hover:text-soft-orange"
+              class="font-bold md:text-xl text-base text-off-white mb-2 hover:text-soft-orange"
               >The Downsides of AI Artistry</a
             >
             <p
@@ -169,10 +206,10 @@ import "../../styles/base.css";
             </p>
             <hr class="opacity-30 text-off-white" />
           </div>
-          <div class="mt-10">
+          <div class="md:mt-10 mt-6">
             <a
               href="#"
-              class="font-bold text-xl text-off-white mb-2 hover:text-soft-orange"
+              class="font-bold md:text-xl text-base text-off-white mb-2 hover:text-soft-orange"
               >Is VC Funding Drying Up?</a
             >
             <p class="font-normal text-base text-gray-blue mt-4 opacity-70">
@@ -182,87 +219,84 @@ import "../../styles/base.css";
           </div>
         </div>
       </div>
-      <div class="flex mt-10 gap-4">
-        <div class="w-1/3 ml-8 flex flex-col">
-          <div class="flex gap-4">
-            <div class="w-1/2">
-              <img
-                src="../../assets/img/image-retro-pcs.jpg"
-                alt=""
-                class="w-[100px] h-[130px]"
-              />
-            </div>
-            <div class="flex flex-col">
-              <span
-                class="font-bold tracking-tight text-4xl text-gray-blue mb-2"
-                >01</span
-              >
-              <a
-                href="#"
-                class="font-bold text-xl text-dark-blue mb-2 hover:text-soft-red"
-              >
-                Reviving Retro PCs</a
-              >
-              <p class="font-normal text-md text-dark-blue opacity-70">
-                What happens when old PCs are given modern upgrades?
-              </p>
-            </div>
+
+      <!-- grid -->
+
+      <div class="w-full ml-8 mt-6 grid items md:grid-cols-3 gap-4">
+        <div class="flex space-x-4">
+          <div class="w-1/3">
+            <img
+              src="../../assets/img/image-retro-pcs.jpg"
+              alt=""
+              class="bg-cover"
+            />
+          </div>
+          <div class="w-2/3 flex flex-col">
+            <span
+              class="mb-2 text-2xl font-bold tracking-tight text-gray-blue md:text-4xl"
+              >01</span
+            >
+            <a
+              href="#"
+              class="mb-2 text-base font-bold text-dark-blue hover:text-soft-red"
+            >
+              Reviving Retro PCs</a
+            >
+            <p class="text-sm font-normal text-dark-blue opacity-70">
+              What happens when old PCs are given modern upgrades?
+            </p>
           </div>
         </div>
-        <div class="w-1/3 ml-8 flex flex-col">
-          <div class="flex gap-4">
-            <div class="w-1/2">
-              <img
-                src="../../assets/img/image-top-laptops.jpg"
-                alt=""
-                class="w-[100px] h-[130px]"
-              />
-            </div>
-            <div class="flex flex-col">
-              <span
-                class="font-bold tracking-tight text-4xl text-gray-blue mb-2"
-                >02</span
-              >
-              <a
-                href="#"
-                class="font-bold text-xl text-dark-blue mb-2 hover:text-soft-red"
-              >
-                Top 10 Laptops of 2022</a
-              >
-              <p class="font-normal text-md text-dark-blue opacity-70">
-                Our best picks for various needs and budgets.
-              </p>
-            </div>
+        <div class="flex space-x-4">
+          <div class="w-1/3">
+            <img
+              src="../../assets/img/image-top-laptops.jpg"
+              alt=""
+              class="bg-cover"
+            />
+          </div>
+          <div class="w-2/3 flex flex-col">
+            <span
+              class="mb-2 text-2xl font-bold tracking-tight text-gray-blue md:text-4xl"
+              >02</span
+            >
+            <a
+              href="#"
+              class="mb-2 text-base font-bold text-dark-blue hover:text-soft-red"
+            >
+              Top 10 Laptops of 2022</a
+            >
+            <p class="text-sm font-normal text-dark-blue opacity-70">
+              Our best picks for various needs and budgets.
+            </p>
           </div>
         </div>
-        <div class="w-1/3 ml-8 flex flex-col">
-          <div class="flex gap-4">
-            <div class="w-1/2">
-              <img
-                src="../../assets/img/image-gaming-growth.jpg"
-                class="w-[100px] h-[130px]"
-                alt=""
-              />
-            </div>
-            <div class="flex flex-col">
-              <span
-                class="font-bold tracking-tight text-4xl text-gray-blue mb-2"
-                >03</span
-              >
-              <a
-                href="#"
-                class="font-bold text-xl text-dark-blue mb-2 hover:text-soft-red"
-              >
-                The Growth of Gaming</a
-              >
-              <p class="font-normal text-md text-dark-blue opacity-70">
-                How the pandemic has sparked fresh opportunities.
-              </p>
-            </div>
+        <div class="flex space-x-4">
+          <div class="w-1/3">
+            <img
+              src="../../assets/img/image-gaming-growth.jpg"
+              alt=""
+              class="bg-cover"
+            />
+          </div>
+          <div class="w-2/3 flex flex-col">
+            <span
+              class="mb-2 text-2xl font-bold tracking-tight text-gray-blue md:text-4xl"
+              >03</span
+            >
+            <a
+              href="#"
+              class="mb-2 text-base font-bold text-dark-blue hover:text-soft-red"
+            >
+              The Growth of Gaming</a
+            >
+            <p class="text-sm font-normal text-dark-blue opacity-70">
+              How the pandemic has sparked fresh opportunities.
+            </p>
           </div>
         </div>
       </div>
-      <div class="flex mt-10 gap-6 h-48"></div>
+      <div class="h-48"></div>
     </div>
   </body>
 </html>
