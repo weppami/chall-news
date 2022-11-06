@@ -23,8 +23,8 @@ module.exports = {
 		},
 		extend: {
 			backgroundImage: (theme) => ({
-				hero: "url('./public/image-web-3-desktop.jpg')",
-				herom: "url('./public/image-web-3-mobile.jpg')",
+				hero: "url('/image-web-3-desktop.jpg')",
+				herom: "url('/image-web-3-mobile.jpg')",
 			}),
 		},
 	},
